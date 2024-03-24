@@ -1,0 +1,744 @@
+Reading fortran codes...
+	Reading file 'Radex/src/background.f' (format:fix,strict)
+	Reading file 'Radex/src/radex.inc' (format:fix)
+	Reading file 'Radex/src/radex.inc' (format:fix)
+	Reading file 'Radex/src/io.f' (format:fix,strict)
+	Reading file 'Radex/src/radex.inc' (format:fix)
+Line #24 in Radex/src/io.f:"      integer length       ! subroutine to determine"
+	updatevars: could not crack entity declaration "length!". Ignoring.
+Line #26 in Radex/src/io.f:"      integer ipart        ! loop over collision partners"
+	updatevars: could not crack entity declaration "ipart!". Ignoring.
+Line #27 in Radex/src/io.f:"      character*10 partner ! name of collision partner"
+	updatevars: no name pattern found for entity='!'. Skipping.
+Line #27 in Radex/src/io.f:"      character*10 partner ! name of collision partner"
+	updatevars: attempt to change the type of "collision" ("integer") to "character". Ignoring.
+Line #30 in Radex/src/io.f:"      integer id           ! ID code of collision partner"
+	updatevars: could not crack entity declaration "id!". Ignoring.
+Line #30 in Radex/src/io.f:"      integer id           ! ID code of collision partner"
+	updatevars: attempt to change the type of "of" ("character") to "integer". Ignoring.
+Line #30 in Radex/src/io.f:"      integer id           ! ID code of collision partner"
+	updatevars: attempt to change the type of "partner" ("character") to "integer". Ignoring.
+	Reading file 'Radex/src/radex.inc' (format:fix)
+Line #162 in Radex/src/io.f:"      integer ipart  ! to loop over collision partners"
+	updatevars: could not crack entity declaration "ipart!". Ignoring.
+	Reading file 'Radex/src/radex.inc' (format:fix)
+Line #201 in Radex/src/io.f:"      integer iline    ! to loop over lines"
+	updatevars: could not crack entity declaration "iline!". Ignoring.
+Line #202 in Radex/src/io.f:"      integer m,n      ! upper & lower level of the line"
+	updatevars: could not crack entity declaration "n!". Ignoring.
+Line #202 in Radex/src/io.f:"      integer m,n      ! upper & lower level of the line"
+	updatevars: no name pattern found for entity='&'. Skipping.
+Line #204 in Radex/src/io.f:"      integer niter    ! final number of iterations"
+	updatevars: could not crack entity declaration "niter!". Ignoring.
+Line #208 in Radex/src/io.f:"      real*8 xt        ! frequency cubed"
+	updatevars: could not crack entity declaration "xt!". Ignoring.
+Line #209 in Radex/src/io.f:"      real*8 hnu       ! photon energy"
+	updatevars: could not crack entity declaration "hnu!". Ignoring.
+Line #210 in Radex/src/io.f:"      real*8 bnutex    ! line source function"
+	updatevars: could not crack entity declaration "bnutex!". Ignoring.
+Line #210 in Radex/src/io.f:"      real*8 bnutex    ! line source function"
+	updatevars: attempt to change the type of "line" ("integer") to "real". Ignoring.
+Line #211 in Radex/src/io.f:"      real*8 ftau      ! exp(-tau)"
+	updatevars: could not crack entity declaration "ftau!". Ignoring.
+Line #212 in Radex/src/io.f:"      real*8 toti      ! background intensity"
+	updatevars: could not crack entity declaration "toti!". Ignoring.
+Line #213 in Radex/src/io.f:"      real*8 tbl       ! black body temperature"
+	updatevars: could not crack entity declaration "tbl!". Ignoring.
+Line #214 in Radex/src/io.f:"      real*8 wh        ! Planck correction"
+	updatevars: could not crack entity declaration "wh!". Ignoring.
+Line #215 in Radex/src/io.f:"      real*8 tback     ! background temperature"
+	updatevars: could not crack entity declaration "tback!". Ignoring.
+Line #216 in Radex/src/io.f:"      real*8 ta        ! line antenna temperature"
+	updatevars: could not crack entity declaration "ta!". Ignoring.
+Line #216 in Radex/src/io.f:"      real*8 ta        ! line antenna temperature"
+	updatevars: attempt to change the type of "line" ("integer") to "real". Ignoring.
+Line #217 in Radex/src/io.f:"      real*8 tr        ! line radiation temperature"
+	updatevars: could not crack entity declaration "tr!". Ignoring.
+Line #217 in Radex/src/io.f:"      real*8 tr        ! line radiation temperature"
+	updatevars: attempt to change the type of "line" ("integer") to "real". Ignoring.
+Line #218 in Radex/src/io.f:"      real*8 beta,escprob ! escape probability"
+	updatevars: no name pattern found for entity='!'. Skipping.
+Line #220 in Radex/src/io.f:"      real*8 bnu       ! Planck function"
+	updatevars: could not crack entity declaration "bnu!". Ignoring.
+Line #221 in Radex/src/io.f:"      real*8 kkms      ! line integrated intensity (K km/s)"
+	updatevars: could not crack entity declaration "kkms!". Ignoring.
+Line #221 in Radex/src/io.f:"      real*8 kkms      ! line integrated intensity (K km/s)"
+	updatevars: attempt to change the type of "line" ("integer") to "real". Ignoring.
+Line #222 in Radex/src/io.f:"      real*8 ergs      ! line flux (erg / s / cm^2)"
+	updatevars: could not crack entity declaration "ergs!". Ignoring.
+Line #222 in Radex/src/io.f:"      real*8 ergs      ! line flux (erg / s / cm^2)"
+	updatevars: attempt to change the type of "line" ("integer") to "real". Ignoring.
+Line #227 in Radex/src/io.f:"      real*8 wavel     ! line wavelength (micron)"
+	updatevars: could not crack entity declaration "wavel!". Ignoring.
+Line #227 in Radex/src/io.f:"      real*8 wavel     ! line wavelength (micron)"
+	updatevars: attempt to change the type of "line" ("integer") to "real". Ignoring.
+	Reading file 'Radex/src/main.f' (format:fix,strict)
+	Reading file 'Radex/src/radex.inc' (format:fix)
+Line #25 in Radex/src/main.f:"      integer niter   ! iteration counter"
+	updatevars: could not crack entity declaration "niter!". Ignoring.
+Line #26 in Radex/src/main.f:"      integer imore   ! are we running again?"
+	updatevars: could not crack entity declaration "imore!". Ignoring.
+Line #26 in Radex/src/main.f:"      integer imore   ! are we running again?"
+	updatevars: could not crack entity declaration "again?". Ignoring.
+Line #29 in Radex/src/main.f:"      logical conv    ! are we converged?"
+	updatevars: could not crack entity declaration "conv!". Ignoring.
+Line #29 in Radex/src/main.f:"      logical conv    ! are we converged?"
+	updatevars: attempt to change the type of "are" ("integer") to "logical". Ignoring.
+Line #29 in Radex/src/main.f:"      logical conv    ! are we converged?"
+	updatevars: attempt to change the type of "we" ("integer") to "logical". Ignoring.
+Line #29 in Radex/src/main.f:"      logical conv    ! are we converged?"
+	updatevars: could not crack entity declaration "converged?". Ignoring.
+	Reading file 'Radex/src/matrix.f' (format:fix,strict)
+	Reading file 'Radex/src/radex.inc' (format:fix)
+Line #25 in Radex/src/matrix.f:"      integer niter            ! iteration counter"
+	updatevars: could not crack entity declaration "niter!". Ignoring.
+Line #26 in Radex/src/matrix.f:"      integer ilev,jlev,klev   ! to loop over energy levels"
+	updatevars: could not crack entity declaration "klev!". Ignoring.
+Line #27 in Radex/src/matrix.f:"      integer nplus            ! to solve statistical equilibrium"
+	updatevars: could not crack entity declaration "nplus!". Ignoring.
+Line #28 in Radex/src/matrix.f:"      integer iline            ! to loop over lines"
+	updatevars: could not crack entity declaration "iline!". Ignoring.
+Line #29 in Radex/src/matrix.f:"      integer m,n              ! line upper/lower levels"
+	updatevars: could not crack entity declaration "n!". Ignoring.
+Line #29 in Radex/src/matrix.f:"      integer m,n              ! line upper/lower levels"
+	updatevars: could not crack entity declaration "upper/lower". Ignoring.
+Line #30 in Radex/src/matrix.f:"      integer nthick           ! counts optically thick lines"
+	updatevars: could not crack entity declaration "nthick!". Ignoring.
+Line #31 in Radex/src/matrix.f:"      integer nfat             ! counts highly optically thick lines"
+	updatevars: could not crack entity declaration "nfat!". Ignoring.
+Line #32 in Radex/src/matrix.f:"      integer nreduce          ! size of reduced rate matrix"
+	updatevars: could not crack entity declaration "nreduce!". Ignoring.
+Line #34 in Radex/src/matrix.f:"      integer indx,dsign       ! needed for NumRep equation solver"
+	updatevars: could not crack entity declaration "dsign!". Ignoring.
+Line #35 in Radex/src/matrix.f:"      real*8 rhs(maxlev)           ! RHS of rate equation"
+	updatevars: could not crack entity declaration "rhs(maxlev)!". Ignoring.
+Line #35 in Radex/src/matrix.f:"      real*8 rhs(maxlev)           ! RHS of rate equation"
+	updatevars: attempt to change the type of "of" ("integer") to "real". Ignoring.
+Line #35 in Radex/src/matrix.f:"      real*8 rhs(maxlev)           ! RHS of rate equation"
+	updatevars: attempt to change the type of "rate" ("integer") to "real". Ignoring.
+Line #35 in Radex/src/matrix.f:"      real*8 rhs(maxlev)           ! RHS of rate equation"
+	updatevars: attempt to change the type of "equation" ("integer") to "real". Ignoring.
+Line #37 in Radex/src/matrix.f:"      real*8 yrate(maxlev,maxlev)  ! rate matrix"
+	updatevars: could not crack entity declaration "yrate(maxlev,maxlev)!". Ignoring.
+Line #37 in Radex/src/matrix.f:"      real*8 yrate(maxlev,maxlev)  ! rate matrix"
+	updatevars: attempt to change the type of "rate" ("integer") to "real". Ignoring.
+Line #37 in Radex/src/matrix.f:"      real*8 yrate(maxlev,maxlev)  ! rate matrix"
+	updatevars: attempt to change the type of "matrix" ("integer") to "real". Ignoring.
+Line #38 in Radex/src/matrix.f:"      real*8 etr,exr               ! to calculate radiative rates"
+	updatevars: could not crack entity declaration "exr!". Ignoring.
+Line #38 in Radex/src/matrix.f:"      real*8 etr,exr               ! to calculate radiative rates"
+	updatevars: attempt to change the type of "to" ("integer") to "real". Ignoring.
+Line #39 in Radex/src/matrix.f:"      real*8 xt                    ! frequency cubed"
+	updatevars: could not crack entity declaration "xt!". Ignoring.
+Line #40 in Radex/src/matrix.f:"      real*8 hnu                   ! photon energy"
+	updatevars: could not crack entity declaration "hnu!". Ignoring.
+Line #40 in Radex/src/matrix.f:"      real*8 hnu                   ! photon energy"
+	updatevars: attempt to change the type of "energy" ("integer") to "real". Ignoring.
+Line #41 in Radex/src/matrix.f:"      real*8 bnutex                ! line source function"
+	updatevars: could not crack entity declaration "bnutex!". Ignoring.
+Line #41 in Radex/src/matrix.f:"      real*8 bnutex                ! line source function"
+	updatevars: attempt to change the type of "line" ("integer") to "real". Ignoring.
+Line #42 in Radex/src/matrix.f:"      real*8 cddv                  ! N(mol) / delta V"
+	updatevars: could not crack entity declaration "cddv!". Ignoring.
+Line #42 in Radex/src/matrix.f:"      real*8 cddv                  ! N(mol) / delta V"
+	updatevars: attempt to change the type of "n" ("integer") to "real". Ignoring.
+Line #42 in Radex/src/matrix.f:"      real*8 cddv                  ! N(mol) / delta V"
+	updatevars: could not crack entity declaration "n(mol)/delta". Ignoring.
+Line #43 in Radex/src/matrix.f:"      real*8 beta,escprob          ! escape probability"
+	updatevars: could not crack entity declaration "escprob!". Ignoring.
+Line #45 in Radex/src/matrix.f:"      real*8 bnu                   ! Planck function"
+	updatevars: could not crack entity declaration "bnu!". Ignoring.
+Line #46 in Radex/src/matrix.f:"      real*8 uarray(maxlev,maxlev) ! reduced rate matrix"
+	updatevars: could not crack entity declaration "uarray(maxlev,maxlev)!". Ignoring.
+Line #46 in Radex/src/matrix.f:"      real*8 uarray(maxlev,maxlev) ! reduced rate matrix"
+	updatevars: attempt to change the type of "reduced" ("integer") to "real". Ignoring.
+Line #46 in Radex/src/matrix.f:"      real*8 uarray(maxlev,maxlev) ! reduced rate matrix"
+	updatevars: attempt to change the type of "rate" ("integer") to "real". Ignoring.
+Line #46 in Radex/src/matrix.f:"      real*8 uarray(maxlev,maxlev) ! reduced rate matrix"
+	updatevars: attempt to change the type of "matrix" ("integer") to "real". Ignoring.
+Line #47 in Radex/src/matrix.f:"      real*8 redcrit               ! reduction criterion"
+	updatevars: could not crack entity declaration "redcrit!". Ignoring.
+Line #48 in Radex/src/matrix.f:"      real*8 sumx                  ! summed radiative rate"
+	updatevars: could not crack entity declaration "sumx!". Ignoring.
+Line #48 in Radex/src/matrix.f:"      real*8 sumx                  ! summed radiative rate"
+	updatevars: attempt to change the type of "rate" ("integer") to "real". Ignoring.
+Line #49 in Radex/src/matrix.f:"      real*8 total                 ! to normalize populations"
+	updatevars: could not crack entity declaration "total!". Ignoring.
+Line #49 in Radex/src/matrix.f:"      real*8 total                 ! to normalize populations"
+	updatevars: attempt to change the type of "to" ("integer") to "real". Ignoring.
+Line #51 in Radex/src/matrix.f:"      real*8 tsum,thistex          ! to check convergence"
+	updatevars: could not crack entity declaration "thistex!". Ignoring.
+Line #51 in Radex/src/matrix.f:"      real*8 tsum,thistex          ! to check convergence"
+	updatevars: attempt to change the type of "to" ("integer") to "real". Ignoring.
+Line #54 in Radex/src/matrix.f:"      logical conv                 ! are we converged?"
+	updatevars: could not crack entity declaration "conv!". Ignoring.
+Line #54 in Radex/src/matrix.f:"      logical conv                 ! are we converged?"
+	updatevars: could not crack entity declaration "converged?". Ignoring.
+	Reading file 'Radex/src/radex.inc' (format:fix)
+Line #329 in Radex/src/matrix.f:"      real*8 taur  !optical radius"
+	updatevars: could not crack entity declaration "taur!optical". Ignoring.
+	Reading file 'Radex/src/readdata.f' (format:fix,strict)
+	Reading file 'Radex/src/radex.inc' (format:fix)
+Line #25 in Radex/src/readdata.f:"      integer ilev,jlev   ! to loop over energy levels"
+	updatevars: could not crack entity declaration "jlev!". Ignoring.
+Line #26 in Radex/src/readdata.f:"      integer iline       ! to loop over lines"
+	updatevars: could not crack entity declaration "iline!". Ignoring.
+Line #27 in Radex/src/readdata.f:"      integer ipart,jpart ! to loop over collision partners"
+	updatevars: no name pattern found for entity='!'. Skipping.
+Line #28 in Radex/src/readdata.f:"      integer itemp       ! to loop over collision temperatures"
+	updatevars: could not crack entity declaration "itemp!". Ignoring.
+Line #29 in Radex/src/readdata.f:"      integer icoll       ! to loop over collisional transitions"
+	updatevars: could not crack entity declaration "icoll!". Ignoring.
+Line #31 in Radex/src/readdata.f:"      integer dummy       ! to skip part of the file"
+	updatevars: could not crack entity declaration "dummy!". Ignoring.
+Line #34 in Radex/src/readdata.f:"      integer id(maxpart)      ! to identify collision partners"
+	updatevars: could not crack entity declaration "id(maxpart)!". Ignoring.
+Line #40 in Radex/src/readdata.f:"      real*8 temp(maxtemp) ! collision temperatures"
+	updatevars: could not crack entity declaration "temp(maxtemp)!". Ignoring.
+Line #40 in Radex/src/readdata.f:"      real*8 temp(maxtemp) ! collision temperatures"
+	updatevars: attempt to change the type of "collision" ("integer") to "real". Ignoring.
+Line #40 in Radex/src/readdata.f:"      real*8 temp(maxtemp) ! collision temperatures"
+	updatevars: attempt to change the type of "temperatures" ("integer") to "real". Ignoring.
+Line #43 in Radex/src/readdata.f:"      character*120 collref ! text about source of collisional data"
+	updatevars: no name pattern found for entity='!'. Skipping.
+Line #43 in Radex/src/readdata.f:"      character*120 collref ! text about source of collisional data"
+	updatevars: attempt to change the type of "of" ("integer") to "character". Ignoring.
+Line #43 in Radex/src/readdata.f:"      character*120 collref ! text about source of collisional data"
+	updatevars: attempt to change the type of "collisional" ("integer") to "character". Ignoring.
+	Reading file 'Radex/src/slatec.f' (format:fix,strict)
+Post-processing...
+	Block: backrad
+	Block: galbr
+	Block: splcoeff
+	Block: splintrp
+	Block: getinputs
+	Block: defaults
+	Block: length
+	Block: output
+In: Radex/src/io.f:output
+	getarrlen:variable "micron" undefined
+	Block: radex
+	Block: matrix
+	Block: escprob
+	Block: readdata
+	Block: ludcmp
+	Block: lubksb
+	Block: sgeir
+	Block: r1mach
+	Block: sasum
+	Block: scopy
+	Block: sdsdot
+	Block: sgefa
+	Block: isamax
+	Block: saxpy
+	Block: sscal
+	Block: sgesl
+	Block: sdot
+	Block: xermsg
+	Block: j4save
+	Block: xercnt
+	Block: xerhlt
+	Block: xerprn
+	Block: i1mach
+	Block: xgetua
+	Block: xersve
+	Block: fdump
+Post-processing (stage 2)...
+Saving signatures to file "./pyradex/radex/radex.pyf"
+Unknown vendor: "gfortran"
+running build
+running config_cc
+unifing config_cc, config, build_clib, build_ext, build commands --compiler options
+running config_fc
+unifing config_fc, config, build_clib, build_ext, build commands --fcompiler options
+running build_src
+build_src
+building extension "radex" sources
+f2py options: []
+f2py:> /tmp/tmpV1EdPP/src.linux-x86_64-2.7/radexmodule.c
+creating /tmp/tmpV1EdPP/src.linux-x86_64-2.7
+Reading fortran codes...
+	Reading file 'Radex/src/background.f' (format:fix,strict)
+	Reading file 'Radex/src/radex.inc' (format:fix)
+	Reading file 'Radex/src/radex.inc' (format:fix)
+	Reading file 'Radex/src/io.f' (format:fix,strict)
+	Reading file 'Radex/src/radex.inc' (format:fix)
+Line #24 in Radex/src/io.f:"      integer length       ! subroutine to determine"
+	updatevars: could not crack entity declaration "length!". Ignoring.
+Line #26 in Radex/src/io.f:"      integer ipart        ! loop over collision partners"
+	updatevars: could not crack entity declaration "ipart!". Ignoring.
+Line #27 in Radex/src/io.f:"      character*10 partner ! name of collision partner"
+	updatevars: no name pattern found for entity='!'. Skipping.
+Line #27 in Radex/src/io.f:"      character*10 partner ! name of collision partner"
+	updatevars: attempt to change the type of "collision" ("integer") to "character". Ignoring.
+Line #30 in Radex/src/io.f:"      integer id           ! ID code of collision partner"
+	updatevars: could not crack entity declaration "id!". Ignoring.
+Line #30 in Radex/src/io.f:"      integer id           ! ID code of collision partner"
+	updatevars: attempt to change the type of "of" ("character") to "integer". Ignoring.
+Line #30 in Radex/src/io.f:"      integer id           ! ID code of collision partner"
+	updatevars: attempt to change the type of "partner" ("character") to "integer". Ignoring.
+	Reading file 'Radex/src/radex.inc' (format:fix)
+Line #162 in Radex/src/io.f:"      integer ipart  ! to loop over collision partners"
+	updatevars: could not crack entity declaration "ipart!". Ignoring.
+	Reading file 'Radex/src/radex.inc' (format:fix)
+Line #201 in Radex/src/io.f:"      integer iline    ! to loop over lines"
+	updatevars: could not crack entity declaration "iline!". Ignoring.
+Line #202 in Radex/src/io.f:"      integer m,n      ! upper & lower level of the line"
+	updatevars: could not crack entity declaration "n!". Ignoring.
+Line #202 in Radex/src/io.f:"      integer m,n      ! upper & lower level of the line"
+	updatevars: no name pattern found for entity='&'. Skipping.
+Line #204 in Radex/src/io.f:"      integer niter    ! final number of iterations"
+	updatevars: could not crack entity declaration "niter!". Ignoring.
+Line #208 in Radex/src/io.f:"      real*8 xt        ! frequency cubed"
+	updatevars: could not crack entity declaration "xt!". Ignoring.
+Line #209 in Radex/src/io.f:"      real*8 hnu       ! photon energy"
+	updatevars: could not crack entity declaration "hnu!". Ignoring.
+Line #210 in Radex/src/io.f:"      real*8 bnutex    ! line source function"
+	updatevars: could not crack entity declaration "bnutex!". Ignoring.
+Line #210 in Radex/src/io.f:"      real*8 bnutex    ! line source function"
+	updatevars: attempt to change the type of "line" ("integer") to "real". Ignoring.
+Line #211 in Radex/src/io.f:"      real*8 ftau      ! exp(-tau)"
+	updatevars: could not crack entity declaration "ftau!". Ignoring.
+Line #212 in Radex/src/io.f:"      real*8 toti      ! background intensity"
+	updatevars: could not crack entity declaration "toti!". Ignoring.
+Line #213 in Radex/src/io.f:"      real*8 tbl       ! black body temperature"
+	updatevars: could not crack entity declaration "tbl!". Ignoring.
+Line #214 in Radex/src/io.f:"      real*8 wh        ! Planck correction"
+	updatevars: could not crack entity declaration "wh!". Ignoring.
+Line #215 in Radex/src/io.f:"      real*8 tback     ! background temperature"
+	updatevars: could not crack entity declaration "tback!". Ignoring.
+Line #216 in Radex/src/io.f:"      real*8 ta        ! line antenna temperature"
+	updatevars: could not crack entity declaration "ta!". Ignoring.
+Line #216 in Radex/src/io.f:"      real*8 ta        ! line antenna temperature"
+	updatevars: attempt to change the type of "line" ("integer") to "real". Ignoring.
+Line #217 in Radex/src/io.f:"      real*8 tr        ! line radiation temperature"
+	updatevars: could not crack entity declaration "tr!". Ignoring.
+Line #217 in Radex/src/io.f:"      real*8 tr        ! line radiation temperature"
+	updatevars: attempt to change the type of "line" ("integer") to "real". Ignoring.
+Line #218 in Radex/src/io.f:"      real*8 beta,escprob ! escape probability"
+	updatevars: no name pattern found for entity='!'. Skipping.
+Line #220 in Radex/src/io.f:"      real*8 bnu       ! Planck function"
+	updatevars: could not crack entity declaration "bnu!". Ignoring.
+Line #221 in Radex/src/io.f:"      real*8 kkms      ! line integrated intensity (K km/s)"
+	updatevars: could not crack entity declaration "kkms!". Ignoring.
+Line #221 in Radex/src/io.f:"      real*8 kkms      ! line integrated intensity (K km/s)"
+	updatevars: attempt to change the type of "line" ("integer") to "real". Ignoring.
+Line #222 in Radex/src/io.f:"      real*8 ergs      ! line flux (erg / s / cm^2)"
+	updatevars: could not crack entity declaration "ergs!". Ignoring.
+Line #222 in Radex/src/io.f:"      real*8 ergs      ! line flux (erg / s / cm^2)"
+	updatevars: attempt to change the type of "line" ("integer") to "real". Ignoring.
+Line #227 in Radex/src/io.f:"      real*8 wavel     ! line wavelength (micron)"
+	updatevars: could not crack entity declaration "wavel!". Ignoring.
+Line #227 in Radex/src/io.f:"      real*8 wavel     ! line wavelength (micron)"
+	updatevars: attempt to change the type of "line" ("integer") to "real". Ignoring.
+	Reading file 'Radex/src/main.f' (format:fix,strict)
+	Reading file 'Radex/src/radex.inc' (format:fix)
+Line #25 in Radex/src/main.f:"      integer niter   ! iteration counter"
+	updatevars: could not crack entity declaration "niter!". Ignoring.
+Line #26 in Radex/src/main.f:"      integer imore   ! are we running again?"
+	updatevars: could not crack entity declaration "imore!". Ignoring.
+Line #26 in Radex/src/main.f:"      integer imore   ! are we running again?"
+	updatevars: could not crack entity declaration "again?". Ignoring.
+Line #29 in Radex/src/main.f:"      logical conv    ! are we converged?"
+	updatevars: could not crack entity declaration "conv!". Ignoring.
+Line #29 in Radex/src/main.f:"      logical conv    ! are we converged?"
+	updatevars: attempt to change the type of "are" ("integer") to "logical". Ignoring.
+Line #29 in Radex/src/main.f:"      logical conv    ! are we converged?"
+	updatevars: attempt to change the type of "we" ("integer") to "logical". Ignoring.
+Line #29 in Radex/src/main.f:"      logical conv    ! are we converged?"
+	updatevars: could not crack entity declaration "converged?". Ignoring.
+	Reading file 'Radex/src/matrix.f' (format:fix,strict)
+	Reading file 'Radex/src/radex.inc' (format:fix)
+Line #25 in Radex/src/matrix.f:"      integer niter            ! iteration counter"
+	updatevars: could not crack entity declaration "niter!". Ignoring.
+Line #26 in Radex/src/matrix.f:"      integer ilev,jlev,klev   ! to loop over energy levels"
+	updatevars: could not crack entity declaration "klev!". Ignoring.
+Line #27 in Radex/src/matrix.f:"      integer nplus            ! to solve statistical equilibrium"
+	updatevars: could not crack entity declaration "nplus!". Ignoring.
+Line #28 in Radex/src/matrix.f:"      integer iline            ! to loop over lines"
+	updatevars: could not crack entity declaration "iline!". Ignoring.
+Line #29 in Radex/src/matrix.f:"      integer m,n              ! line upper/lower levels"
+	updatevars: could not crack entity declaration "n!". Ignoring.
+Line #29 in Radex/src/matrix.f:"      integer m,n              ! line upper/lower levels"
+	updatevars: could not crack entity declaration "upper/lower". Ignoring.
+Line #30 in Radex/src/matrix.f:"      integer nthick           ! counts optically thick lines"
+	updatevars: could not crack entity declaration "nthick!". Ignoring.
+Line #31 in Radex/src/matrix.f:"      integer nfat             ! counts highly optically thick lines"
+	updatevars: could not crack entity declaration "nfat!". Ignoring.
+Line #32 in Radex/src/matrix.f:"      integer nreduce          ! size of reduced rate matrix"
+	updatevars: could not crack entity declaration "nreduce!". Ignoring.
+Line #34 in Radex/src/matrix.f:"      integer indx,dsign       ! needed for NumRep equation solver"
+	updatevars: could not crack entity declaration "dsign!". Ignoring.
+Line #35 in Radex/src/matrix.f:"      real*8 rhs(maxlev)           ! RHS of rate equation"
+	updatevars: could not crack entity declaration "rhs(maxlev)!". Ignoring.
+Line #35 in Radex/src/matrix.f:"      real*8 rhs(maxlev)           ! RHS of rate equation"
+	updatevars: attempt to change the type of "of" ("integer") to "real". Ignoring.
+Line #35 in Radex/src/matrix.f:"      real*8 rhs(maxlev)           ! RHS of rate equation"
+	updatevars: attempt to change the type of "rate" ("integer") to "real". Ignoring.
+Line #35 in Radex/src/matrix.f:"      real*8 rhs(maxlev)           ! RHS of rate equation"
+	updatevars: attempt to change the type of "equation" ("integer") to "real". Ignoring.
+Line #37 in Radex/src/matrix.f:"      real*8 yrate(maxlev,maxlev)  ! rate matrix"
+	updatevars: could not crack entity declaration "yrate(maxlev,maxlev)!". Ignoring.
+Line #37 in Radex/src/matrix.f:"      real*8 yrate(maxlev,maxlev)  ! rate matrix"
+	updatevars: attempt to change the type of "rate" ("integer") to "real". Ignoring.
+Line #37 in Radex/src/matrix.f:"      real*8 yrate(maxlev,maxlev)  ! rate matrix"
+	updatevars: attempt to change the type of "matrix" ("integer") to "real". Ignoring.
+Line #38 in Radex/src/matrix.f:"      real*8 etr,exr               ! to calculate radiative rates"
+	updatevars: could not crack entity declaration "exr!". Ignoring.
+Line #38 in Radex/src/matrix.f:"      real*8 etr,exr               ! to calculate radiative rates"
+	updatevars: attempt to change the type of "to" ("integer") to "real". Ignoring.
+Line #39 in Radex/src/matrix.f:"      real*8 xt                    ! frequency cubed"
+	updatevars: could not crack entity declaration "xt!". Ignoring.
+Line #40 in Radex/src/matrix.f:"      real*8 hnu                   ! photon energy"
+	updatevars: could not crack entity declaration "hnu!". Ignoring.
+Line #40 in Radex/src/matrix.f:"      real*8 hnu                   ! photon energy"
+	updatevars: attempt to change the type of "energy" ("integer") to "real". Ignoring.
+Line #41 in Radex/src/matrix.f:"      real*8 bnutex                ! line source function"
+	updatevars: could not crack entity declaration "bnutex!". Ignoring.
+Line #41 in Radex/src/matrix.f:"      real*8 bnutex                ! line source function"
+	updatevars: attempt to change the type of "line" ("integer") to "real". Ignoring.
+Line #42 in Radex/src/matrix.f:"      real*8 cddv                  ! N(mol) / delta V"
+	updatevars: could not crack entity declaration "cddv!". Ignoring.
+Line #42 in Radex/src/matrix.f:"      real*8 cddv                  ! N(mol) / delta V"
+	updatevars: attempt to change the type of "n" ("integer") to "real". Ignoring.
+Line #42 in Radex/src/matrix.f:"      real*8 cddv                  ! N(mol) / delta V"
+	updatevars: could not crack entity declaration "n(mol)/delta". Ignoring.
+Line #43 in Radex/src/matrix.f:"      real*8 beta,escprob          ! escape probability"
+	updatevars: could not crack entity declaration "escprob!". Ignoring.
+Line #45 in Radex/src/matrix.f:"      real*8 bnu                   ! Planck function"
+	updatevars: could not crack entity declaration "bnu!". Ignoring.
+Line #46 in Radex/src/matrix.f:"      real*8 uarray(maxlev,maxlev) ! reduced rate matrix"
+	updatevars: could not crack entity declaration "uarray(maxlev,maxlev)!". Ignoring.
+Line #46 in Radex/src/matrix.f:"      real*8 uarray(maxlev,maxlev) ! reduced rate matrix"
+	updatevars: attempt to change the type of "reduced" ("integer") to "real". Ignoring.
+Line #46 in Radex/src/matrix.f:"      real*8 uarray(maxlev,maxlev) ! reduced rate matrix"
+	updatevars: attempt to change the type of "rate" ("integer") to "real". Ignoring.
+Line #46 in Radex/src/matrix.f:"      real*8 uarray(maxlev,maxlev) ! reduced rate matrix"
+	updatevars: attempt to change the type of "matrix" ("integer") to "real". Ignoring.
+Line #47 in Radex/src/matrix.f:"      real*8 redcrit               ! reduction criterion"
+	updatevars: could not crack entity declaration "redcrit!". Ignoring.
+Line #48 in Radex/src/matrix.f:"      real*8 sumx                  ! summed radiative rate"
+	updatevars: could not crack entity declaration "sumx!". Ignoring.
+Line #48 in Radex/src/matrix.f:"      real*8 sumx                  ! summed radiative rate"
+	updatevars: attempt to change the type of "rate" ("integer") to "real". Ignoring.
+Line #49 in Radex/src/matrix.f:"      real*8 total                 ! to normalize populations"
+	updatevars: could not crack entity declaration "total!". Ignoring.
+Line #49 in Radex/src/matrix.f:"      real*8 total                 ! to normalize populations"
+	updatevars: attempt to change the type of "to" ("integer") to "real". Ignoring.
+Line #51 in Radex/src/matrix.f:"      real*8 tsum,thistex          ! to check convergence"
+	updatevars: could not crack entity declaration "thistex!". Ignoring.
+Line #51 in Radex/src/matrix.f:"      real*8 tsum,thistex          ! to check convergence"
+	updatevars: attempt to change the type of "to" ("integer") to "real". Ignoring.
+Line #54 in Radex/src/matrix.f:"      logical conv                 ! are we converged?"
+	updatevars: could not crack entity declaration "conv!". Ignoring.
+Line #54 in Radex/src/matrix.f:"      logical conv                 ! are we converged?"
+	updatevars: could not crack entity declaration "converged?". Ignoring.
+	Reading file 'Radex/src/radex.inc' (format:fix)
+Line #329 in Radex/src/matrix.f:"      real*8 taur  !optical radius"
+	updatevars: could not crack entity declaration "taur!optical". Ignoring.
+	Reading file 'Radex/src/readdata.f' (format:fix,strict)
+	Reading file 'Radex/src/radex.inc' (format:fix)
+Line #25 in Radex/src/readdata.f:"      integer ilev,jlev   ! to loop over energy levels"
+	updatevars: could not crack entity declaration "jlev!". Ignoring.
+Line #26 in Radex/src/readdata.f:"      integer iline       ! to loop over lines"
+	updatevars: could not crack entity declaration "iline!". Ignoring.
+Line #27 in Radex/src/readdata.f:"      integer ipart,jpart ! to loop over collision partners"
+	updatevars: no name pattern found for entity='!'. Skipping.
+Line #28 in Radex/src/readdata.f:"      integer itemp       ! to loop over collision temperatures"
+	updatevars: could not crack entity declaration "itemp!". Ignoring.
+Line #29 in Radex/src/readdata.f:"      integer icoll       ! to loop over collisional transitions"
+	updatevars: could not crack entity declaration "icoll!". Ignoring.
+Line #31 in Radex/src/readdata.f:"      integer dummy       ! to skip part of the file"
+	updatevars: could not crack entity declaration "dummy!". Ignoring.
+Line #34 in Radex/src/readdata.f:"      integer id(maxpart)      ! to identify collision partners"
+	updatevars: could not crack entity declaration "id(maxpart)!". Ignoring.
+Line #40 in Radex/src/readdata.f:"      real*8 temp(maxtemp) ! collision temperatures"
+	updatevars: could not crack entity declaration "temp(maxtemp)!". Ignoring.
+Line #40 in Radex/src/readdata.f:"      real*8 temp(maxtemp) ! collision temperatures"
+	updatevars: attempt to change the type of "collision" ("integer") to "real". Ignoring.
+Line #40 in Radex/src/readdata.f:"      real*8 temp(maxtemp) ! collision temperatures"
+	updatevars: attempt to change the type of "temperatures" ("integer") to "real". Ignoring.
+Line #43 in Radex/src/readdata.f:"      character*120 collref ! text about source of collisional data"
+	updatevars: no name pattern found for entity='!'. Skipping.
+Line #43 in Radex/src/readdata.f:"      character*120 collref ! text about source of collisional data"
+	updatevars: attempt to change the type of "of" ("integer") to "character". Ignoring.
+Line #43 in Radex/src/readdata.f:"      character*120 collref ! text about source of collisional data"
+	updatevars: attempt to change the type of "collisional" ("integer") to "character". Ignoring.
+	Reading file 'Radex/src/slatec.f' (format:fix,strict)
+Post-processing...
+	Block: radex
+			Block: backrad
+			Block: galbr
+			Block: splcoeff
+			Block: splintrp
+			Block: getinputs
+			Block: defaults
+			Block: length
+			Block: output
+In: :radex:Radex/src/io.f:output
+	getarrlen:variable "micron" undefined
+			Block: radex
+			Block: matrix
+			Block: escprob
+			Block: readdata
+			Block: ludcmp
+			Block: lubksb
+			Block: sgeir
+{}
+In: :radex:Radex/src/slatec.f:r1mach
+vars2fortran: No typespec for argument "i".
+			Block: r1mach
+			Block: sasum
+{}
+In: :radex:Radex/src/slatec.f:scopy
+vars2fortran: No typespec for argument "n".
+{}
+In: :radex:Radex/src/slatec.f:scopy
+vars2fortran: No typespec for argument "incx".
+{}
+In: :radex:Radex/src/slatec.f:scopy
+vars2fortran: No typespec for argument "incy".
+			Block: scopy
+{}
+In: :radex:Radex/src/slatec.f:sdsdot
+vars2fortran: No typespec for argument "n".
+{}
+In: :radex:Radex/src/slatec.f:sdsdot
+vars2fortran: No typespec for argument "incx".
+{}
+In: :radex:Radex/src/slatec.f:sdsdot
+vars2fortran: No typespec for argument "incy".
+			Block: sdsdot
+			Block: sgefa
+			Block: isamax
+{}
+In: :radex:Radex/src/slatec.f:saxpy
+vars2fortran: No typespec for argument "n".
+{}
+In: :radex:Radex/src/slatec.f:saxpy
+vars2fortran: No typespec for argument "incx".
+{}
+In: :radex:Radex/src/slatec.f:saxpy
+vars2fortran: No typespec for argument "incy".
+			Block: saxpy
+			Block: sscal
+			Block: sgesl
+{}
+In: :radex:Radex/src/slatec.f:sdot
+vars2fortran: No typespec for argument "n".
+{}
+In: :radex:Radex/src/slatec.f:sdot
+vars2fortran: No typespec for argument "incx".
+{}
+In: :radex:Radex/src/slatec.f:sdot
+vars2fortran: No typespec for argument "incy".
+			Block: sdot
+{}
+In: :radex:Radex/src/slatec.f:xermsg
+vars2fortran: No typespec for argument "nerr".
+{}
+In: :radex:Radex/src/slatec.f:xermsg
+vars2fortran: No typespec for argument "level".
+			Block: xermsg
+{}
+In: :radex:Radex/src/slatec.f:j4save
+vars2fortran: No typespec for argument "iwhich".
+{}
+In: :radex:Radex/src/slatec.f:j4save
+vars2fortran: No typespec for argument "ivalue".
+			Block: j4save
+{}
+In: :radex:Radex/src/slatec.f:xercnt
+vars2fortran: No typespec for argument "nerr".
+{}
+In: :radex:Radex/src/slatec.f:xercnt
+vars2fortran: No typespec for argument "level".
+{}
+In: :radex:Radex/src/slatec.f:xercnt
+vars2fortran: No typespec for argument "kontrl".
+			Block: xercnt
+			Block: xerhlt
+			Block: xerprn
+{}
+In: :radex:Radex/src/slatec.f:i1mach
+vars2fortran: No typespec for argument "i".
+			Block: i1mach
+{'attrspec': ['dimension(5)']}
+In: :radex:Radex/src/slatec.f:xgetua
+vars2fortran: No typespec for argument "iunita".
+{}
+In: :radex:Radex/src/slatec.f:xgetua
+vars2fortran: No typespec for argument "n".
+			Block: xgetua
+{}
+In: :radex:Radex/src/slatec.f:xersve
+vars2fortran: No typespec for argument "kflag".
+{}
+In: :radex:Radex/src/slatec.f:xersve
+vars2fortran: No typespec for argument "nerr".
+{}
+In: :radex:Radex/src/slatec.f:xersve
+vars2fortran: No typespec for argument "level".
+{}
+In: :radex:Radex/src/slatec.f:xersve
+vars2fortran: No typespec for argument "icount".
+			Block: xersve
+			Block: fdump
+Post-processing (stage 2)...
+Building modules...
+	Building module "radex"...
+		Constructing wrapper function "backrad"...
+		  backrad()
+		Constructing wrapper function "galbr"...
+		  galbr()
+		Constructing wrapper function "splcoeff"...
+		  splcoeff(x,f,n,fp1,fpn,fpp)
+		Constructing wrapper function "splintrp"...
+		  splintrp(xin,fin,fppin,x,fout,[n])
+		Constructing wrapper function "getinputs"...
+		  getinputs()
+		Constructing wrapper function "defaults"...
+		  defaults()
+		Creating wrapper for Fortran function "length"("length")...
+		Constructing wrapper function "length"...
+		  length = length(str)
+		Constructing wrapper function "output"...
+		  output(niter)
+		Constructing wrapper function "matrix"...
+		  matrix(niter,conv)
+		Creating wrapper for Fortran function "escprob"("escprob")...
+		Constructing wrapper function "escprob"...
+		  escprob = escprob(tau)
+		Constructing wrapper function "readdata"...
+		  readdata()
+		Constructing wrapper function "ludcmp"...
+		  ludcmp(a,indx,d,[n,np])
+		Constructing wrapper function "lubksb"...
+		  lubksb(a,n,indx,b,[np])
+		Constructing wrapper function "sgeir"...
+getarrdims:warning: assumed shape array, using 0 instead of '*'
+getarrdims:warning: assumed shape array, using 0 instead of '*'
+getarrdims:warning: assumed shape array, using 0 instead of '*'
+getarrdims:warning: assumed shape array, using 0 instead of '*'
+		  sgeir(a,v,itask,ind,work,iwork,[lda,n])
+		Creating wrapper for Fortran function "r1mach"("r1mach")...
+		Constructing wrapper function "r1mach"...
+		  r1mach = r1mach(i)
+		Creating wrapper for Fortran function "sasum"("sasum")...
+		Constructing wrapper function "sasum"...
+getarrdims:warning: assumed shape array, using 0 instead of '*'
+		  sasum = sasum(n,sx,incx)
+		Constructing wrapper function "scopy"...
+getarrdims:warning: assumed shape array, using 0 instead of '*'
+getarrdims:warning: assumed shape array, using 0 instead of '*'
+		  scopy(n,sx,incx,sy,incy)
+		Creating wrapper for Fortran function "sdsdot"("sdsdot")...
+		Constructing wrapper function "sdsdot"...
+getarrdims:warning: assumed shape array, using 0 instead of '*'
+getarrdims:warning: assumed shape array, using 0 instead of '*'
+		  sdsdot = sdsdot(n,sb,sx,incx,sy,incy)
+		Constructing wrapper function "sgefa"...
+getarrdims:warning: assumed shape array, using 0 instead of '*'
+getarrdims:warning: assumed shape array, using 0 instead of '*'
+		  sgefa(a,n,ipvt,info,[lda])
+		Creating wrapper for Fortran function "isamax"("isamax")...
+		Constructing wrapper function "isamax"...
+getarrdims:warning: assumed shape array, using 0 instead of '*'
+		  isamax = isamax(n,sx,incx)
+		Constructing wrapper function "saxpy"...
+getarrdims:warning: assumed shape array, using 0 instead of '*'
+getarrdims:warning: assumed shape array, using 0 instead of '*'
+		  saxpy(n,sa,sx,incx,sy,incy)
+		Constructing wrapper function "sscal"...
+getarrdims:warning: assumed shape array, using 0 instead of '*'
+		  sscal(n,sa,sx,incx)
+		Constructing wrapper function "sgesl"...
+getarrdims:warning: assumed shape array, using 0 instead of '*'
+getarrdims:warning: assumed shape array, using 0 instead of '*'
+getarrdims:warning: assumed shape array, using 0 instead of '*'
+		  sgesl(a,n,ipvt,b,job,[lda])
+		Creating wrapper for Fortran function "sdot"("sdot")...
+		Constructing wrapper function "sdot"...
+getarrdims:warning: assumed shape array, using 0 instead of '*'
+getarrdims:warning: assumed shape array, using 0 instead of '*'
+		  sdot = sdot(n,sx,incx,sy,incy)
+		Constructing wrapper function "xermsg"...
+		  xermsg(librar,subrou,messg,nerr,level)
+		Creating wrapper for Fortran function "j4save"("j4save")...
+		Constructing wrapper function "j4save"...
+		  j4save = j4save(iwhich,ivalue,iset)
+		Constructing wrapper function "xercnt"...
+		  xercnt(librar,subrou,messg,nerr,level,kontrl)
+		Constructing wrapper function "xerhlt"...
+		  xerhlt(messg)
+		Constructing wrapper function "xerprn"...
+		  xerprn(prefix,npref,messg,nwrap)
+		Creating wrapper for Fortran function "i1mach"("i1mach")...
+		Constructing wrapper function "i1mach"...
+		  i1mach = i1mach(i)
+		Constructing wrapper function "xgetua"...
+		  xgetua(iunita,n)
+		Constructing wrapper function "xersve"...
+		  xersve(librar,subrou,messg,kflag,nerr,level,icount)
+		Constructing wrapper function "fdump"...
+		  fdump()
+		Constructing COMMON block support for "collie"...
+		  crate,ctot,xpop
+		Constructing COMMON block support for "impex"...
+		  outfile,molfile,specref
+		Constructing COMMON block support for "cphys"...
+		  density,tkin,tbg,cdmol,deltav,totdens
+		Constructing COMMON block support for "imolec"...
+		  nlev,nline,ncoll,npart,ntemp,iupp,ilow
+		Constructing COMMON block support for "setup"...
+		  radat,method,version,logfile
+		Constructing COMMON block support for "radi"...
+		  xnu,taul,tex,backi,totalb,spfreq,trj
+		Constructing COMMON block support for "rmolec"...
+		  amass,eterm,gstat,aeinst,eup
+		Constructing COMMON block support for "quant"...
+		  qnum
+		Constructing COMMON block support for "dbg"...
+		  debug
+		Constructing COMMON block support for "freq"...
+		  fmin,fmax
+	Wrote C/API module "radex" to file "/tmp/tmpV1EdPP/src.linux-x86_64-2.7/radexmodule.c"
+	Fortran 77 wrappers are saved to "/tmp/tmpV1EdPP/src.linux-x86_64-2.7/radex-f2pywrappers.f"
+  adding '/tmp/tmpV1EdPP/src.linux-x86_64-2.7/fortranobject.c' to sources.
+  adding '/tmp/tmpV1EdPP/src.linux-x86_64-2.7' to include_dirs.
+copying /home/zj/anaconda3/envs/LVG/lib/python2.7/site-packages/numpy/f2py/src/fortranobject.c -> /tmp/tmpV1EdPP/src.linux-x86_64-2.7
+copying /home/zj/anaconda3/envs/LVG/lib/python2.7/site-packages/numpy/f2py/src/fortranobject.h -> /tmp/tmpV1EdPP/src.linux-x86_64-2.7
+  adding '/tmp/tmpV1EdPP/src.linux-x86_64-2.7/radex-f2pywrappers.f' to sources.
+build_src: building npy-pkg config files
+running build_ext
+customize UnixCCompiler
+customize UnixCCompiler using build_ext
+customize Gnu95FCompiler
+Found executable /usr/bin/gfortran
+customize Gnu95FCompiler using build_ext
+building 'radex' extension
+compiling C sources
+C compiler: gcc -pthread -B /home/zj/anaconda3/envs/LVG/compiler_compat -Wl,--sysroot=/ -fno-strict-aliasing -g -O2 -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fPIC
+
+creating /tmp/tmpV1EdPP/tmp
+creating /tmp/tmpV1EdPP/tmp/tmpV1EdPP
+creating /tmp/tmpV1EdPP/tmp/tmpV1EdPP/src.linux-x86_64-2.7
+compile options: '-I/tmp/tmpV1EdPP/src.linux-x86_64-2.7 -I/home/zj/anaconda3/envs/LVG/lib/python2.7/site-packages/numpy/core/include -I/home/zj/anaconda3/envs/LVG/include/python2.7 -c'
+gcc: /tmp/tmpV1EdPP/src.linux-x86_64-2.7/fortranobject.c
+gcc: /tmp/tmpV1EdPP/src.linux-x86_64-2.7/radexmodule.c
+compiling Fortran sources
+Fortran f77 compiler: /usr/bin/gfortran -Wall -g -ffixed-form -fno-second-underscore -fPIC -O3 -funroll-loops
+Fortran f90 compiler: /usr/bin/gfortran -Wall -g -fno-second-underscore -fPIC -O3 -funroll-loops
+Fortran fix compiler: /usr/bin/gfortran -Wall -g -ffixed-form -fno-second-underscore -Wall -g -fno-second-underscore -fPIC -O3 -funroll-loops
+creating /tmp/tmpV1EdPP/Radex
+creating /tmp/tmpV1EdPP/Radex/src
+compile options: '-I/tmp/tmpV1EdPP/src.linux-x86_64-2.7 -I/home/zj/anaconda3/envs/LVG/lib/python2.7/site-packages/numpy/core/include -I/home/zj/anaconda3/envs/LVG/include/python2.7 -c'
+gfortran:f77: Radex/src/io.f
+gfortran:f77: Radex/src/background.f
+gfortran:f77: Radex/src/matrix.f
+gfortran:f77: Radex/src/readdata.f
+gfortran:f77: Radex/src/main.f
+gfortran:f77: /tmp/tmpV1EdPP/src.linux-x86_64-2.7/radex-f2pywrappers.f
+gfortran:f77: Radex/src/slatec.f
+/usr/bin/gfortran -Wall -g -Wall -g -shared /tmp/tmpV1EdPP/tmp/tmpV1EdPP/src.linux-x86_64-2.7/radexmodule.o /tmp/tmpV1EdPP/tmp/tmpV1EdPP/src.linux-x86_64-2.7/fortranobject.o /tmp/tmpV1EdPP/Radex/src/background.o /tmp/tmpV1EdPP/Radex/src/io.o /tmp/tmpV1EdPP/Radex/src/main.o /tmp/tmpV1EdPP/Radex/src/matrix.o /tmp/tmpV1EdPP/Radex/src/readdata.o /tmp/tmpV1EdPP/Radex/src/slatec.o /tmp/tmpV1EdPP/tmp/tmpV1EdPP/src.linux-x86_64-2.7/radex-f2pywrappers.o -L/usr/lib/gcc/x86_64-linux-gnu/9 -L/usr/lib/gcc/x86_64-linux-gnu/9 -L/home/zj/anaconda3/envs/LVG/lib -lpython2.7 -lgfortran -o ./radex.so
+Removing build directory /tmp/tmpV1EdPP

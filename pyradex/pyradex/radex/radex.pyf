@@ -1,0 +1,581 @@
+!    -*- f90 -*-
+! Note: the context of this file is case sensitive.
+
+subroutine backrad ! in Radex/src/background.f
+    real*8 dimension(2999,2999) :: crate
+    real*8 dimension(2999) :: ctot
+    real*8 dimension(2999) :: xpop
+    character*120 :: outfile
+    character*120 :: molfile
+    character*120 :: specref
+    real*8 dimension(9) :: density
+    real*8 :: tkin
+    real*8 :: tbg
+    real*8 :: cdmol
+    real*8 :: deltav
+    real*8 :: totdens
+    integer :: nlev
+    integer :: nline
+    integer :: ncoll
+    integer :: npart
+    integer :: ntemp
+    integer dimension(99999) :: iupp
+    integer dimension(99999) :: ilow
+    character*120 :: radat
+    integer :: method
+    character*20 :: version
+    character*120 :: logfile
+    real*8 dimension(99999) :: xnu
+    real*8 dimension(99999) :: taul
+    real*8 dimension(99999) :: tex
+    real*8 dimension(99999) :: backi
+    real*8 dimension(99999) :: totalb
+    real*8 dimension(99999) :: spfreq
+    real*8 dimension(99999) :: trj
+    real*8 :: amass
+    real*8 dimension(2999) :: eterm
+    real*8 dimension(2999) :: gstat
+    real*8 dimension(99999) :: aeinst
+    real*8 dimension(99999) :: eup
+    character dimension(2999,6),intent(c) :: qnum
+    logical :: debug
+    real*8 :: fmin
+    real*8 :: fmax
+    common /collie/ crate,ctot,xpop
+    common /impex/ outfile,molfile,specref
+    common /cphys/ density,tkin,tbg,cdmol,deltav,totdens
+    common /imolec/ nlev,nline,ncoll,npart,ntemp,iupp,ilow
+    common /setup/ radat,method,version,logfile
+    common /radi/ xnu,taul,tex,backi,totalb,spfreq,trj
+    common /rmolec/ amass,eterm,gstat,aeinst,eup
+    common /quant/ qnum
+    common /dbg/ debug
+    common /freq/ fmin,fmax
+end subroutine backrad
+subroutine galbr ! in Radex/src/background.f
+    real*8 dimension(2999,2999) :: crate
+    real*8 dimension(2999) :: ctot
+    real*8 dimension(2999) :: xpop
+    character*120 :: outfile
+    character*120 :: molfile
+    character*120 :: specref
+    real*8 dimension(9) :: density
+    real*8 :: tkin
+    real*8 :: tbg
+    real*8 :: cdmol
+    real*8 :: deltav
+    real*8 :: totdens
+    integer :: nlev
+    integer :: nline
+    integer :: ncoll
+    integer :: npart
+    integer :: ntemp
+    integer dimension(99999) :: iupp
+    integer dimension(99999) :: ilow
+    character*120 :: radat
+    integer :: method
+    character*20 :: version
+    character*120 :: logfile
+    real*8 dimension(99999) :: xnu
+    real*8 dimension(99999) :: taul
+    real*8 dimension(99999) :: tex
+    real*8 dimension(99999) :: backi
+    real*8 dimension(99999) :: totalb
+    real*8 dimension(99999) :: spfreq
+    real*8 dimension(99999) :: trj
+    real*8 :: amass
+    real*8 dimension(2999) :: eterm
+    real*8 dimension(2999) :: gstat
+    real*8 dimension(99999) :: aeinst
+    real*8 dimension(99999) :: eup
+    character dimension(2999,6),intent(c) :: qnum
+    logical :: debug
+    real*8 :: fmin
+    real*8 :: fmax
+    common /collie/ crate,ctot,xpop
+    common /impex/ outfile,molfile,specref
+    common /cphys/ density,tkin,tbg,cdmol,deltav,totdens
+    common /imolec/ nlev,nline,ncoll,npart,ntemp,iupp,ilow
+    common /setup/ radat,method,version,logfile
+    common /radi/ xnu,taul,tex,backi,totalb,spfreq,trj
+    common /rmolec/ amass,eterm,gstat,aeinst,eup
+    common /quant/ qnum
+    common /dbg/ debug
+    common /freq/ fmin,fmax
+end subroutine galbr
+subroutine splcoeff(x,f,n,fp1,fpn,fpp) ! in Radex/src/background.f
+    real*8 dimension(2500) :: x
+    real*8 dimension(2500) :: f
+    integer :: n
+    real*8 :: fp1
+    real*8 :: fpn
+    real*8 dimension(2500) :: fpp
+end subroutine splcoeff
+subroutine splintrp(xin,fin,fppin,n,x,fout) ! in Radex/src/background.f
+    real*8 dimension(n) :: xin
+    real*8 dimension(n),depend(n) :: fin
+    real*8 dimension(n),depend(n) :: fppin
+    integer, optional,check(len(xin)>=n),depend(xin) :: n=len(xin)
+    real*8 :: x
+    real*8 :: fout
+end subroutine splintrp
+subroutine getinputs ! in Radex/src/io.f
+    real*8 dimension(2999,2999) :: crate
+    real*8 dimension(2999) :: ctot
+    real*8 dimension(2999) :: xpop
+    character*120 :: outfile
+    character*120 :: molfile
+    character*120 :: specref
+    real*8 dimension(9) :: density
+    real*8 :: tkin
+    real*8 :: tbg
+    real*8 :: cdmol
+    real*8 :: deltav
+    real*8 :: totdens
+    integer :: nlev
+    integer :: nline
+    integer :: ncoll
+    integer :: npart
+    integer :: ntemp
+    integer dimension(99999) :: iupp
+    integer dimension(99999) :: ilow
+    character*120 :: radat
+    integer :: method
+    character*20 :: version
+    character*120 :: logfile
+    real*8 dimension(99999) :: xnu
+    real*8 dimension(99999) :: taul
+    real*8 dimension(99999) :: tex
+    real*8 dimension(99999) :: backi
+    real*8 dimension(99999) :: totalb
+    real*8 dimension(99999) :: spfreq
+    real*8 dimension(99999) :: trj
+    real*8 :: amass
+    real*8 dimension(2999) :: eterm
+    real*8 dimension(2999) :: gstat
+    real*8 dimension(99999) :: aeinst
+    real*8 dimension(99999) :: eup
+    character dimension(2999,6),intent(c) :: qnum
+    logical :: debug
+    real*8 :: fmin
+    real*8 :: fmax
+    common /collie/ crate,ctot,xpop
+    common /impex/ outfile,molfile,specref
+    common /cphys/ density,tkin,tbg,cdmol,deltav,totdens
+    common /imolec/ nlev,nline,ncoll,npart,ntemp,iupp,ilow
+    common /setup/ radat,method,version,logfile
+    common /radi/ xnu,taul,tex,backi,totalb,spfreq,trj
+    common /rmolec/ amass,eterm,gstat,aeinst,eup
+    common /quant/ qnum
+    common /dbg/ debug
+    common /freq/ fmin,fmax
+end subroutine getinputs
+subroutine defaults ! in Radex/src/io.f
+    real*8 dimension(2999,2999) :: crate
+    real*8 dimension(2999) :: ctot
+    real*8 dimension(2999) :: xpop
+    character*120 :: outfile
+    character*120 :: molfile
+    character*120 :: specref
+    real*8 dimension(9) :: density
+    real*8 :: tkin
+    real*8 :: tbg
+    real*8 :: cdmol
+    real*8 :: deltav
+    real*8 :: totdens
+    integer :: nlev
+    integer :: nline
+    integer :: ncoll
+    integer :: npart
+    integer :: ntemp
+    integer dimension(99999) :: iupp
+    integer dimension(99999) :: ilow
+    character*120 :: radat
+    integer :: method
+    character*20 :: version
+    character*120 :: logfile
+    real*8 dimension(99999) :: xnu
+    real*8 dimension(99999) :: taul
+    real*8 dimension(99999) :: tex
+    real*8 dimension(99999) :: backi
+    real*8 dimension(99999) :: totalb
+    real*8 dimension(99999) :: spfreq
+    real*8 dimension(99999) :: trj
+    real*8 :: amass
+    real*8 dimension(2999) :: eterm
+    real*8 dimension(2999) :: gstat
+    real*8 dimension(99999) :: aeinst
+    real*8 dimension(99999) :: eup
+    character dimension(2999,6),intent(c) :: qnum
+    logical :: debug
+    real*8 :: fmin
+    real*8 :: fmax
+    common /collie/ crate,ctot,xpop
+    common /impex/ outfile,molfile,specref
+    common /cphys/ density,tkin,tbg,cdmol,deltav,totdens
+    common /imolec/ nlev,nline,ncoll,npart,ntemp,iupp,ilow
+    common /setup/ radat,method,version,logfile
+    common /radi/ xnu,taul,tex,backi,totalb,spfreq,trj
+    common /rmolec/ amass,eterm,gstat,aeinst,eup
+    common /quant/ qnum
+    common /dbg/ debug
+    common /freq/ fmin,fmax
+end subroutine defaults
+function length(str) ! in Radex/src/io.f
+    character*200 :: str
+    integer :: length
+end function length
+subroutine output(niter) ! in Radex/src/io.f
+    integer :: niter
+    real*8 dimension(2999,2999) :: crate
+    real*8 dimension(2999) :: ctot
+    real*8 dimension(2999) :: xpop
+    character*120 :: outfile
+    character*120 :: molfile
+    character*120 :: specref
+    real*8 dimension(9) :: density
+    real*8 :: tkin
+    real*8 :: tbg
+    real*8 :: cdmol
+    real*8 :: deltav
+    real*8 :: totdens
+    integer :: nlev
+    integer :: nline
+    integer :: ncoll
+    integer :: npart
+    integer :: ntemp
+    integer dimension(99999) :: iupp
+    integer dimension(99999) :: ilow
+    character*120 :: radat
+    integer :: method
+    character*20 :: version
+    character*120 :: logfile
+    real*8 dimension(99999) :: xnu
+    real*8 dimension(99999) :: taul
+    real*8 dimension(99999) :: tex
+    real*8 dimension(99999) :: backi
+    real*8 dimension(99999) :: totalb
+    real*8 dimension(99999) :: spfreq
+    real*8 dimension(99999) :: trj
+    real*8 :: amass
+    real*8 dimension(2999) :: eterm
+    real*8 dimension(2999) :: gstat
+    real*8 dimension(99999) :: aeinst
+    real*8 dimension(99999) :: eup
+    character dimension(2999,6),intent(c) :: qnum
+    logical :: debug
+    real*8 :: fmin
+    real*8 :: fmax
+    common /collie/ crate,ctot,xpop
+    common /impex/ outfile,molfile,specref
+    common /cphys/ density,tkin,tbg,cdmol,deltav,totdens
+    common /imolec/ nlev,nline,ncoll,npart,ntemp,iupp,ilow
+    common /setup/ radat,method,version,logfile
+    common /radi/ xnu,taul,tex,backi,totalb,spfreq,trj
+    common /rmolec/ amass,eterm,gstat,aeinst,eup
+    common /quant/ qnum
+    common /dbg/ debug
+    common /freq/ fmin,fmax
+end subroutine output
+subroutine matrix(niter,conv) ! in Radex/src/matrix.f
+    integer :: niter
+    logical :: conv
+    real*8 dimension(2999,2999) :: crate
+    real*8 dimension(2999) :: ctot
+    real*8 dimension(2999) :: xpop
+    character*120 :: outfile
+    character*120 :: molfile
+    character*120 :: specref
+    real*8 dimension(9) :: density
+    real*8 :: tkin
+    real*8 :: tbg
+    real*8 :: cdmol
+    real*8 :: deltav
+    real*8 :: totdens
+    integer :: nlev
+    integer :: nline
+    integer :: ncoll
+    integer :: npart
+    integer :: ntemp
+    integer dimension(99999) :: iupp
+    integer dimension(99999) :: ilow
+    character*120 :: radat
+    integer :: method
+    character*20 :: version
+    character*120 :: logfile
+    real*8 dimension(99999) :: xnu
+    real*8 dimension(99999) :: taul
+    real*8 dimension(99999) :: tex
+    real*8 dimension(99999) :: backi
+    real*8 dimension(99999) :: totalb
+    real*8 dimension(99999) :: spfreq
+    real*8 dimension(99999) :: trj
+    real*8 :: amass
+    real*8 dimension(2999) :: eterm
+    real*8 dimension(2999) :: gstat
+    real*8 dimension(99999) :: aeinst
+    real*8 dimension(99999) :: eup
+    character dimension(2999,6),intent(c) :: qnum
+    logical :: debug
+    real*8 :: fmin
+    real*8 :: fmax
+    common /collie/ crate,ctot,xpop
+    common /impex/ outfile,molfile,specref
+    common /cphys/ density,tkin,tbg,cdmol,deltav,totdens
+    common /imolec/ nlev,nline,ncoll,npart,ntemp,iupp,ilow
+    common /setup/ radat,method,version,logfile
+    common /radi/ xnu,taul,tex,backi,totalb,spfreq,trj
+    common /rmolec/ amass,eterm,gstat,aeinst,eup
+    common /quant/ qnum
+    common /dbg/ debug
+    common /freq/ fmin,fmax
+end subroutine matrix
+function escprob(tau) ! in Radex/src/matrix.f
+    real*8 :: tau
+    real*8 dimension(2999,2999) :: crate
+    real*8 dimension(2999) :: ctot
+    real*8 dimension(2999) :: xpop
+    character*120 :: outfile
+    character*120 :: molfile
+    character*120 :: specref
+    real*8 dimension(9) :: density
+    real*8 :: tkin
+    real*8 :: tbg
+    real*8 :: cdmol
+    real*8 :: deltav
+    real*8 :: totdens
+    integer :: nlev
+    integer :: nline
+    integer :: ncoll
+    integer :: npart
+    integer :: ntemp
+    integer dimension(99999) :: iupp
+    integer dimension(99999) :: ilow
+    character*120 :: radat
+    integer :: method
+    character*20 :: version
+    character*120 :: logfile
+    real*8 dimension(99999) :: xnu
+    real*8 dimension(99999) :: taul
+    real*8 dimension(99999) :: tex
+    real*8 dimension(99999) :: backi
+    real*8 dimension(99999) :: totalb
+    real*8 dimension(99999) :: spfreq
+    real*8 dimension(99999) :: trj
+    real*8 :: amass
+    real*8 dimension(2999) :: eterm
+    real*8 dimension(2999) :: gstat
+    real*8 dimension(99999) :: aeinst
+    real*8 dimension(99999) :: eup
+    character dimension(2999,6),intent(c) :: qnum
+    logical :: debug
+    real*8 :: fmin
+    real*8 :: fmax
+    real*8 :: escprob
+    common /collie/ crate,ctot,xpop
+    common /impex/ outfile,molfile,specref
+    common /cphys/ density,tkin,tbg,cdmol,deltav,totdens
+    common /imolec/ nlev,nline,ncoll,npart,ntemp,iupp,ilow
+    common /setup/ radat,method,version,logfile
+    common /radi/ xnu,taul,tex,backi,totalb,spfreq,trj
+    common /rmolec/ amass,eterm,gstat,aeinst,eup
+    common /quant/ qnum
+    common /dbg/ debug
+    common /freq/ fmin,fmax
+end function escprob
+subroutine readdata ! in Radex/src/readdata.f
+    real*8 dimension(2999,2999) :: crate
+    real*8 dimension(2999) :: ctot
+    real*8 dimension(2999) :: xpop
+    character*120 :: outfile
+    character*120 :: molfile
+    character*120 :: specref
+    real*8 dimension(9) :: density
+    real*8 :: tkin
+    real*8 :: tbg
+    real*8 :: cdmol
+    real*8 :: deltav
+    real*8 :: totdens
+    integer :: nlev
+    integer :: nline
+    integer :: ncoll
+    integer :: npart
+    integer :: ntemp
+    integer dimension(99999) :: iupp
+    integer dimension(99999) :: ilow
+    character*120 :: radat
+    integer :: method
+    character*20 :: version
+    character*120 :: logfile
+    real*8 dimension(99999) :: xnu
+    real*8 dimension(99999) :: taul
+    real*8 dimension(99999) :: tex
+    real*8 dimension(99999) :: backi
+    real*8 dimension(99999) :: totalb
+    real*8 dimension(99999) :: spfreq
+    real*8 dimension(99999) :: trj
+    real*8 :: amass
+    real*8 dimension(2999) :: eterm
+    real*8 dimension(2999) :: gstat
+    real*8 dimension(99999) :: aeinst
+    real*8 dimension(99999) :: eup
+    character dimension(2999,6),intent(c) :: qnum
+    logical :: debug
+    real*8 :: fmin
+    real*8 :: fmax
+    common /collie/ crate,ctot,xpop
+    common /impex/ outfile,molfile,specref
+    common /cphys/ density,tkin,tbg,cdmol,deltav,totdens
+    common /imolec/ nlev,nline,ncoll,npart,ntemp,iupp,ilow
+    common /setup/ radat,method,version,logfile
+    common /radi/ xnu,taul,tex,backi,totalb,spfreq,trj
+    common /rmolec/ amass,eterm,gstat,aeinst,eup
+    common /quant/ qnum
+    common /dbg/ debug
+    common /freq/ fmin,fmax
+end subroutine readdata
+subroutine ludcmp(a,n,np,indx,d) ! in Radex/src/slatec.f
+    double precision dimension(np,np) :: a
+    integer, optional,check(len(indx)>=n),depend(indx) :: n=len(indx)
+    integer, optional,check(shape(a,0)==np),depend(a) :: np=shape(a,0)
+    integer dimension(n) :: indx
+    double precision :: d
+end subroutine ludcmp
+subroutine lubksb(a,n,np,indx,b) ! in Radex/src/slatec.f
+    double precision dimension(np,np) :: a
+    integer :: n
+    integer, optional,check(shape(a,0)==np),depend(a) :: np=shape(a,0)
+    integer dimension(np),depend(np) :: indx
+    double precision dimension(np),depend(np) :: b
+end subroutine lubksb
+subroutine sgeir(a,lda,n,v,itask,ind,work,iwork) ! in Radex/src/slatec.f
+    double precision dimension(lda,*) :: a
+    integer, optional,check(shape(a,0)==lda),depend(a) :: lda=shape(a,0)
+    integer, optional,check(shape(work,0)==n),depend(work) :: n=shape(work,0)
+    double precision dimension(*) :: v
+    integer :: itask
+    integer :: ind
+    double precision dimension(n,*) :: work
+    integer dimension(*) :: iwork
+end subroutine sgeir
+function r1mach(i) ! in Radex/src/slatec.f
+    integer :: i
+    double precision :: r1mach
+end function r1mach
+function sasum(n,sx,incx) ! in Radex/src/slatec.f
+    integer :: n
+    double precision dimension(*) :: sx
+    integer :: incx
+    double precision :: sasum
+end function sasum
+subroutine scopy(n,sx,incx,sy,incy) ! in Radex/src/slatec.f
+    integer :: n
+    double precision dimension(*) :: sx
+    integer :: incx
+    double precision dimension(*) :: sy
+    integer :: incy
+end subroutine scopy
+function sdsdot(n,sb,sx,incx,sy,incy) ! in Radex/src/slatec.f
+    integer :: n
+    double precision :: sb
+    double precision dimension(*) :: sx
+    integer :: incx
+    double precision dimension(*) :: sy
+    integer :: incy
+    double precision :: sdsdot
+end function sdsdot
+subroutine sgefa(a,lda,n,ipvt,info) ! in Radex/src/slatec.f
+    double precision dimension(lda,*) :: a
+    integer, optional,check(shape(a,0)==lda),depend(a) :: lda=shape(a,0)
+    integer :: n
+    integer dimension(*) :: ipvt
+    integer :: info
+end subroutine sgefa
+function isamax(n,sx,incx) ! in Radex/src/slatec.f
+    integer :: n
+    double precision dimension(*) :: sx
+    integer :: incx
+    integer :: isamax
+end function isamax
+subroutine saxpy(n,sa,sx,incx,sy,incy) ! in Radex/src/slatec.f
+    integer :: n
+    double precision :: sa
+    double precision dimension(*) :: sx
+    integer :: incx
+    double precision dimension(*) :: sy
+    integer :: incy
+end subroutine saxpy
+subroutine sscal(n,sa,sx,incx) ! in Radex/src/slatec.f
+    integer :: n
+    double precision :: sa
+    double precision dimension(*) :: sx
+    integer :: incx
+end subroutine sscal
+subroutine sgesl(a,lda,n,ipvt,b,job) ! in Radex/src/slatec.f
+    double precision dimension(lda,*) :: a
+    integer, optional,check(shape(a,0)==lda),depend(a) :: lda=shape(a,0)
+    integer :: n
+    integer dimension(*) :: ipvt
+    double precision dimension(*) :: b
+    integer :: job
+end subroutine sgesl
+function sdot(n,sx,incx,sy,incy) ! in Radex/src/slatec.f
+    integer :: n
+    double precision dimension(*) :: sx
+    integer :: incx
+    double precision dimension(*) :: sy
+    integer :: incy
+    double precision :: sdot
+end function sdot
+subroutine xermsg(librar,subrou,messg,nerr,level) ! in Radex/src/slatec.f
+    character*(*) :: librar
+    character*(*) :: subrou
+    character*(*) :: messg
+    integer :: nerr
+    integer :: level
+end subroutine xermsg
+function j4save(iwhich,ivalue,iset) ! in Radex/src/slatec.f
+    integer :: iwhich
+    integer :: ivalue
+    logical :: iset
+    integer :: j4save
+end function j4save
+subroutine xercnt(librar,subrou,messg,nerr,level,kontrl) ! in Radex/src/slatec.f
+    character*(*) :: librar
+    character*(*) :: subrou
+    character*(*) :: messg
+    integer :: nerr
+    integer :: level
+    integer :: kontrl
+end subroutine xercnt
+subroutine xerhlt(messg) ! in Radex/src/slatec.f
+    character*(*) :: messg
+end subroutine xerhlt
+subroutine xerprn(prefix,npref,messg,nwrap) ! in Radex/src/slatec.f
+    character*(*) :: prefix
+    integer :: npref
+    character*(*) :: messg
+    integer :: nwrap
+end subroutine xerprn
+function i1mach(i) ! in Radex/src/slatec.f
+    integer :: i
+    integer :: i1mach
+end function i1mach
+subroutine xgetua(iunita,n) ! in Radex/src/slatec.f
+    integer dimension(5) :: iunita
+    integer :: n
+end subroutine xgetua
+subroutine xersve(librar,subrou,messg,kflag,nerr,level,icount) ! in Radex/src/slatec.f
+    character*(*) :: librar
+    character*(*) :: subrou
+    character*(*) :: messg
+    integer :: kflag
+    integer :: nerr
+    integer :: level
+    integer :: icount
+end subroutine xersve
+subroutine fdump ! in Radex/src/slatec.f
+end subroutine fdump
+
+! This file was auto-generated with f2py (version:2).
+! See http://cens.ioc.ee/projects/f2py2e/
